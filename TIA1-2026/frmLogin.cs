@@ -23,5 +23,10 @@ namespace TIA1_2026
             Principal.Show();
             this.Hide();
         }
+
+        private void picCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
