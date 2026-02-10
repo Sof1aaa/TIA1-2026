@@ -36,5 +36,20 @@ namespace TIA1_2026
             AcercaDe.MdiParent = this;
             AcercaDe.Show();
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            frmLogin login = new frmLogin();
+            login.Show();
+            this.Hide();
+        }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmClientes clientes = new frmClientes();
+            clientes.MdiParent = this;
+            clientes.Show();
+        }
     }
 }
+
