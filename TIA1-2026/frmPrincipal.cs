@@ -27,7 +27,6 @@ namespace TIA1_2026
             frmAyuda ayuda = new frmAyuda();
             ayuda.MdiParent = this;
             ayuda.Show();
-
         }
                       
         private void acercaDeToolStripMenuItem_Click(object sender, EventArgs e)
