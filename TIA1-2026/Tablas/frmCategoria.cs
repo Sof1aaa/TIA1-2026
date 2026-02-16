@@ -16,5 +16,9 @@ namespace TIA1_2026.Tablas
         {
             InitializeComponent();
         }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -16,5 +16,11 @@ namespace TIA1_2026
         {
             InitializeComponent();
         }
+
+        private void btnCrear_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+        }
     }
 }

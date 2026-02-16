@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TIA1_2026.Facturación;
+using TIA1_2026.Seguridad;
+using TIA1_2026.Tablas;
 
 namespace TIA1_2026
 {
@@ -17,6 +20,23 @@ namespace TIA1_2026
             InitializeComponent();
         }
 
+        private void AbrirFormulario(Form formulario)
+        {
+            // Cierra cualquier MDI hijo abierto
+            foreach (Form frm in this.MdiChildren)
+            {
+                frm.Close();
+            }
+
+            // Configura el nuevo formulario hijo
+            formulario.MdiParent = this;
+            formulario.StartPosition = FormStartPosition.Manual;
+            formulario.Location = new Point(0, 0);
+            formulario.WindowState = FormWindowState.Maximized;
+
+            formulario.Show();
+        }
+
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -24,30 +44,57 @@ namespace TIA1_2026
 
         private void ayudaToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            frmAyuda ayuda = new frmAyuda();
-            ayuda.MdiParent = this;
-            ayuda.Show();
+            AbrirFormulario (new frmAyuda());
         }
                       
         private void acercaDeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAcercaDe AcercaDe = new frmAcercaDe();
-            AcercaDe.MdiParent = this;
-            AcercaDe.Show();
+            AbrirFormulario(new frmAcercaDe());
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            frmLogin login = new frmLogin();
-            login.Show();
-            this.Hide();
+            Application.Exit();
         }
 
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmClientes clientes = new frmClientes();
-            clientes.MdiParent = this;
-            clientes.Show();
+            AbrirFormulario(new frmClientes());
+        }
+
+        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new frmProductos());
+        }
+
+        private void categoríasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new frmCategoria());
+        }
+
+        private void faToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new frmFacturas());
+        }
+
+        private void informesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new frmInformes());
+        }
+
+        private void empleadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new frmEmpleados());
+        }
+
+        private void rolesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new frmRolEmpleados());
+        }
+
+        private void seguridadToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new frmAdminSeguridad());
         }
     }
 }

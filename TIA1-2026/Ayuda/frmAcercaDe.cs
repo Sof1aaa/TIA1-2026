@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TIA1_2026.Facturación
+namespace TIA1_2026
 {
-    public partial class frmInformes : Form
+    public partial class frmAcercaDe : Form
     {
-        public frmInformes()
+        public frmAcercaDe()
         {
             InitializeComponent();
         }

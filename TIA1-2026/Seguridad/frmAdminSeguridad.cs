@@ -8,13 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TIA1_2026
+namespace TIA1_2026.Seguridad
 {
-    public partial class frmAcercaDe : Form
+    public partial class frmAdminSeguridad : Form
     {
-        public frmAcercaDe()
+        public frmAdminSeguridad()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
         }
     }
 }

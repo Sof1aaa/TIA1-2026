@@ -8,16 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TIA1_2026.Facturación
+namespace TIA1_2026.Seguridad
 {
-    public partial class frmInformes : Form
+    public partial class frmRolEmpleados : Form
     {
-        public frmInformes()
+        public frmRolEmpleados()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
             this.Close();
 
